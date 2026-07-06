@@ -15,7 +15,7 @@ module GettiveMailer
     end
 
     def config
-      configuration ||= Configuration.new
+      self.configuration ||= Configuration.new
     end
   end
 end
