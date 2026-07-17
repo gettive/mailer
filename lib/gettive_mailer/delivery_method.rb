@@ -6,7 +6,7 @@ module GettiveMailer
     end
 
     def deliver!(mail)
-      uri = URI("#{GettiveMailer.config.endpoint}/v1/emails")
+      uri = URI("#{GettiveMailer.config.host}/send-mail")
 
       response = Net::HTTP.start(
         uri.host,

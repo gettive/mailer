@@ -1,9 +1,9 @@
 module GettiveMailer
     class Configuration
-        attr_accessor :api_key, :endpoint
+        attr_accessor :api_key, :host
 
         def initialize
-            @endpoint = ENV.fetch("GETTIVE_MAILER_ENDPOINT", "https://tuqfgkz924.execute-api.us-east-1.amazonaws.com")
+            @host = ENV.fetch("GETTIVE_MAILER_HOST", "https://tuqfgkz924.execute-api.us-east-1.amazonaws.com")
         end
     end
 end
