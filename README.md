@@ -3,28 +3,9 @@ Use this in your Rails app if you have a custom email delivery service, possibly
 
 This allows your application to use your own email infrastructure through Rails' standard mailer interface, without requiring direct SMTP access or provider-specific integration in every application.
 
-# Set up
+# Configuration
 
-## Compiling
-
-Run the following commands
-```
-gem signin
-```
-
-Follow all the steps for signin in. Once completed, run the following
-```
-gem build gettive_mailer.gemspec
-```
-
-This will create a file with its name in the following form *gettive_mailer-*<VERSION>*.gem*. Push that file to ruygems repository using the command shown below;
-```
-gem push gettive_mailer<VERSION>.gem
-```
-
-## Setting up this Gem in your project
-
-Add the following to your GemFile
+To have this gem in your project, add the following to your GemFile
 ```
 gem "gettive_mailer"
 ```
