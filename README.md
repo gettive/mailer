@@ -31,11 +31,18 @@ gem "gettive_mailer"
 
 Afterward, run `bundle install` to have it installed
 
+Add the following variables to your environment variables
+```
+GETTIVE_MAILER_API_KEY=<Your API Key>
+GETTIVE_MAILER_ENDPOINT=<Your Mailer Server Endpoint>
+```
+
 Create *gettive_mailer.rb* inside the initializers directory, and add this; it will be loaded when the server is started
 
 ```
 GettiveMailer.configure do |config|
-    config.api_key = <Your API Key>
+    config.api_key = ENV["GETTIVE_MAILER_API_KEY"]
+    config.host = ENV["GETTIVE_MAILER_ENDPOINT"]
 end
 ``` 
 
