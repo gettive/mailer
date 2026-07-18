@@ -1,5 +1,5 @@
 module GettiveMailer
     class Configuration
-        attr_accessor :api_key, :host
+        attr_accessor :api_key, :endpoint
     end
 end
