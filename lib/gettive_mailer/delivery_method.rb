@@ -9,7 +9,7 @@ module GettiveMailer
       uri = URI("#{GettiveMailer.config.endpoint}")
 
       response = Net::HTTP.start(
-        uri.endpoint,
+        uri.host,
         uri.port,
         use_ssl: uri.scheme == "https"
       ) do |http|
