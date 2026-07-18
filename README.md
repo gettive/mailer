@@ -1,3 +1,10 @@
+# About
+If you have a custom mailer powered by a service such as AWS SES and want to use it across your projects in the same way you would use providers like Resend, Postmark, or Mailgun, you can configure it as an adapter that forwards email requests to your mail server.
+
+This means you don't have to worry about whether the server hosting your application allows outbound connections on SMTP ports.
+
+You can also use this adapter if you choose Gettive Mailer for your email infrastructure. We provide a simple, developer-friendly email API at a lower cost than most alternatives on the market.
+
 # Set up
 
 ## Compiling
