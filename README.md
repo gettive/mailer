@@ -33,4 +33,30 @@ In your prereferred environment (Available in *config/environments/<env name>*),
   config.action_mailer.delivery_method = :gettive_mailer
 ```
 
-You should now be good to go
+# What to Expect
+
+Email requests will be forwarded to your configured mail server endpoint using the following setup.
+
+## Endpoint
+
+`POST <GETTIVE_MAILER_ENDPOINT>`
+
+## Request Headers
+
+| Header          | Value              |
+| --------------- | ------------------ |
+| `Authorization` | `Bearer <API_KEY>` |
+| `Content-Type`  | `application/json` |
+
+## Request Body
+
+The request body contains the raw email encoded as Base64:
+
+```json
+{
+  "raw_email": "<BASE64_ENCODED_RAW_EMAIL>"
+}
+```
+
+Your mail server is responsible for decoding and processing the raw email, then forwarding it to the appropriate email delivery service.
+
