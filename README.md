@@ -1,9 +1,7 @@
 # About
-If you have a custom mailer powered by a service such as AWS SES and want to use it across your projects in the same way you would use providers like Resend, Postmark, or Mailgun, you can configure this as an adapter that forwards email requests to your mail server.
+Use this in your Rails app if you have a custom email delivery service, possibly powered by AWS SES, and need an adapter that forwards email requests to it.
 
-This means you don't have to worry about whether the server hosting your application allows outbound connections on SMTP ports.
-
-You can also use this adapter if you choose Gettive Mailer for your email infrastructure. We provide a simple, developer-friendly email API at a lower cost than most alternatives on the market.
+This allows your application to use your own email infrastructure through Rails' standard mailer interface, without requiring direct SMTP access or provider-specific integration in every application.
 
 # Set up
 
@@ -34,6 +32,7 @@ gem "gettive_mailer"
 Afterward, run `bundle install` to have it installed
 
 Create *gettive_mailer.rb* inside the initializers directory, and add this; it will be loaded when the server is started
+
 ```
 GettiveMailer.configure do |config|
     config.api_key = <Your API Key>
